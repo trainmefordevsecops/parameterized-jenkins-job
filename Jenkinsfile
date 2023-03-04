@@ -15,11 +15,13 @@ pipeline {
         stage("Test") {
             steps {
                 echo "Test stage."
+                sh "echo value of choice parameter selecter ${TEST_BOOLEAN}"
             }
         }
         stage("Release") {
             steps {
                 echo "Release stage."
+                sh "echo value of multi choice selecter ${TEST_CHOICE}"
             }
         }
     }
